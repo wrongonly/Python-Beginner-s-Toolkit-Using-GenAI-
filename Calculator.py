@@ -1,28 +1,12 @@
-# Simple Calculator
+# Note: mobile turtle implementation does not support animation
+# You can't see the turtle moving on the screen
+# The following code will draw the final result directly
 
-print("Simple Calculator")
+from turtle import *
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+for i in range(6):
+    circle(100)
+    right(60)
+dot(10, 'green')
 
-print("Choose operation:")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiply")
-print("4. Divide")
-
-choice = input("Enter choice (1/2/3/4): ")
-
-if choice == '1':
-    print("Result:", num1 + num2)
-elif choice == '2':
-    print("Result:", num1 - num2)
-elif choice == '3':
-    print("Result:", num1 * num2)
-elif choice == '4':
-    if num2 != 0:
-        print("Result:", num1 / num2)
-    else:
-        print("Error: Cannot divide by zero")
-else:
-    print("Invalid choice")
+done()  # must call done() to show the image
